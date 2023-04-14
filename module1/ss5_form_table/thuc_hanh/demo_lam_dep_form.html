@@ -8,13 +8,13 @@
 <center>
 <form action="#" method="get" style="background-color: pink;padding: 1px 10px 10px 10px;width: 350px">
     <h1 style="text-align: center">Đăng ký</h1>
-    <table border="1">
+    <table >
         <tr>
             <td>
                 <label for="name">Name</label>
             </td>
             <td>
-                <input oninput="checkName()" type="text" id="name" name="name">
+                <input oninput="checkValue()" type="text" id="name" name="name"><br>
                 <small style="color:red" id="checkName"></small>
             </td>
         </tr>
@@ -87,6 +87,15 @@
 </form>
 </center>
 <script>
+    function checkValue() {
+        let name = document.getElementById("name").value;
+        if (name.length<=5){
+            document.getElementById("checkName").innerText ="Tên nhập chưa đúng"
+        }else {
+            document.getElementById("checkName").innerText =""
+        }
+
+    }
 </script>
 </body>
 </html>

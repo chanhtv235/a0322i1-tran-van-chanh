@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputName" type="text" placeholder="Nhập tên">
+<button onclick="nhap()">Nhập</button>
+<h2 id="a03"></h2>
+
+<script>
+    // output
+    // hiển thị bằng hộp thoại
+    /* alert("Xin chào");
+    // in trên trang html
+    document.write("<h1>Xin chào codegym</h1>");
+    // in nội dung vào một thẻ html
+    document.getElementById("a03").innerText ="xin chào a03";
+    // hiển thị ở cửa số console
+    console.log("vào cửa sổ F12 sẽ xem được");
+    input dữ liệu
+    sử dụng prompt
+    let ten = prompt("Hãy nhập tên của bạn");
+    alert("Tên của bạn là : " + ten );
+    sử dụng thẻ input của html.
+
+     */
+    function nhap() {
+       let name = document.getElementById("inputName").value;
+       document.getElementById("a03").innerText=name;
+    }
+    sử dụng confirm() => true/false
+    let check = confirm("Bạn có thích giảm nhiệt độ điều hoà không??");
+    alert(check);
+</script>
+</body>
+</html>
