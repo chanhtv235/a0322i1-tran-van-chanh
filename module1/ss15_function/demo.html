@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function change(a, b) {
+        let t = a;
+        a = b;
+        b = t;
+    }
+
+    function change2(arr){
+        arr[0]=100;
+    }
+    let array =[0,0];
+    alert("before: "+ array);
+    change2(array)
+    alert("after: "+ array);
+    // let x = 1;
+    // let y = 3;
+    // alert("before change :  x và y: " + x + "-" + y)
+    // change(x, y);
+    // alert("after change :  x và y: " + x + "-" + y)
+</script>
+</body>
+</html>

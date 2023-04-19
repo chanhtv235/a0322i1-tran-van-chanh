@@ -89,8 +89,9 @@
 <script>
     function checkValue() {
         let name = document.getElementById("name").value;
-        if (name.length<=5){
-            document.getElementById("checkName").innerText ="Tên nhập chưa đúng"
+        let regex=/^[0-9]{10}$/
+        if (!regex.test(name)){
+        document.getElementById("checkName").innerText ="Tên nhập chưa đúng"
         }else {
             document.getElementById("checkName").innerText =""
         }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let x = + prompt("nhập vào 1 số")
+
+    function isPrime(n) {
+        let flag =true;
+      if (n<2){
+         flag =false;
+      }else {
+          for (let i = 2; i <n ; i++) {
+              if (n%i==0){
+                  flag =false;
+                  break;
+              }
+          }
+      }
+      return flag;
+
+    }
+
+    let arr =[12,11,23,11,4];
+    // tính tổng các snt có trong mảng
+    let sum =0;
+    for (let i = 0; i <arr.length ; i++) {
+        if (isPrime(arr[i])){
+            sum+=arr[i];
+        }
+    }
+    alert(sum);
+    // let a =10;
+    //
+    // isPrime(x);
+    // isPrime(a);
+    // isPrime(12);
+
+</script>
+</body>
+</html>
