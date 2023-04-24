@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    // in ra 10 lần hello
+    // bt1      bt2   bt3
+    // for (let i = 0; i <= 10; i = i + 2) {
+    //     //bt4
+    //     document.writeln(i + "Hello <br>");
+    // }
+    // for (let i = 10; i >= 0; i--) {
+    //     document.writeln(i + "Hello <br>");
+    // }
+    // vòng 1: bt1 => bt2 => bt4 => bt3
+    // vòng 2: bt2 => bt4 =>bt3
+
+    // let i=0;
+    // while (i<=10){
+    //     document.writeln(i + "Hello <br>");
+    //     i++;
+    // }
+    // let n = +prompt("nhập vào 1 số");
+    // while (n<0){
+    //     n= prompt("nhập lại")
+    // }
+    // // alert("số vừa nhập là: "+ n);
+    // let m;
+    // do {
+    //     m=+prompt("nhập số");
+    // }while (false);
+
+
+    // let money =10;
+    // while (money>=100){
+    //     alert("uống cafe");
+    // }
+    // let check ="ngon";
+    // do{
+    //     alert("uong cafe");
+    //     check="dở"
+    // }while (false);
+
+
+    // chạy vòng lặp từ 0 đến 100
+    // nếu i =50 thì không in ra nữa
+    // for (let i = 0; i <=100 ; i++) {
+    //     document.writeln(i +"<br>")
+    //     if (i==50){
+    //         break;
+    //     }
+    // }
+
+    // chay vòng lặp từ 0-100
+    // // chỉ in ra các con số chia hết cho 10;
+    // for (let i = 0; i <=100 ; i++) {
+    //     if (i%10!=0){
+    //         continue;
+    //     }
+    //     document.writeln(i +"<br>")
+    // }
+    // alert("end");
+
+    let tableString = '<table border="1">';
+    for (let i = 1; i <= 10; i++) {
+        tableString += '<tr>'
+        for (let j = 1; j < 10; j++) {
+            tableString += '<td>' + j + 'x' + i + '=' + (i * j) + '</td>';
+        }
+        tableString += '</tr>'
+    }
+    tableString += '</table>'
+    document.writeln(tableString);
+
+    // demo in ra 20 snt đầu tiên nằm trong day số tự nhiên?
+
+    // let soLuongSNT = 0;
+    // let n = 2;
+    // while (soLuongSNT <= 20) {
+    //     let count = 0;
+    //     for (let i = 2; i < n; i++) {
+    //         if (n % i == 0) {
+    //             count++;
+    //         }
+    //     }
+    //     if (count == 0) {
+    //         document.writeln(n + ",")
+    //         soLuongSNT++;
+    //     }
+    //     n++;
+    // }
+
+</script>
+</body>
+</html>
