@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let menu = ["Cafe", "Nước cam", "Sữa chua"];
+    let price = [10000, 20000, 15000];
+    let number = [0, 0, 0] // số lượng món tương ứng
+    let choose = -1; // chọn món
+    let total = 0;// tổng tiền
+    let menuOrder = "Số món bạn đã đặt là:\n";
+    do {
+        choose = prompt(getMenu());
+        if (0 < choose && choose <= menu.length) {
+            let n = +prompt("nhập số lượng " + menu[choose - 1] + " giá : " + price[choose - 1] + " VNĐ");
+            number[choose - 1] = n;
+        }
+    } while (choose <= menu.length)
+
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] != 0) {
+            total += number[i] * price[i];
+            menuOrder += menu[i] + ": số lượng ---" + number[i] + " giá : " + price[i]+"VNĐ\n";
+        }
+    }
+    alert(menuOrder + "Tổng số tiền là :" + total);
+
+
+    function getMenu() {
+        let menuString = "Menu của nhà hàng gồm :"
+        for (let i = 0; i < menu.length; i++) {
+            menuString += "\n" + (1 + i) + "." + menu[i] + " giá : " + price[i];
+        }
+        return menuString;
+    }
+</script>
+</body>
+</html>
